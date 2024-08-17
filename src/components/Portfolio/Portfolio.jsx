@@ -157,11 +157,10 @@ export default function Portfolio() {
             <Bar backgroundColor='bg-[#2c3e50]' textColor='text-[#2c3e50]' />
             <div className="flex justify-evenly space-x-2 px-24 py-5 container flex-wrap">
                 {[img1, img2, img3, img1, img2, img3].map((img, index) => (
-                    <div key={index} className="card lg:w-[31%] md:w-[48%] sm:w-full  p-2 group transition-all duration-500 ease-in-out">
+                    <div key={index} onClick={() => openModal(img)} className="card lg:w-[31%] md:w-[48%] sm:w-full  p-2 group transition-all duration-500 ease-in-out">
                         <div className="content relative">
-                            <img src={img} alt="" className="w-full rounded-xl" onClick={() => openModal(img)} />
-                                      {/* problem lies here ! */}
-                            <div className="layer hidden rounded-xl justify-center items-center bg-[#1abc9ce6] absolute inset-0  opacity-0 transition-opacity duration-500 group-hover:opacity-100 z-10">
+                            <img src={img} alt="" className="w-full rounded-xl" />
+                            <div className="layer flex rounded-xl justify-center items-center bg-[#1abc9ce6] absolute inset-0  opacity-0 transition-opacity duration-500 group-hover:opacity-100 z-10">
                                 <i className="fa-solid fa-plus text-8xl text-white"></i>
                             </div>
                         </div>
